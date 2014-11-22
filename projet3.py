@@ -40,7 +40,7 @@ def setCell(cell, val):
      return (val, cell[1],cell[2])
 
 def foldl(func, z, seq):
-      return z if len(seq) == 0 else func(foldl(func,z,seq[1:]), seq[0])
+    return z if len(seq) == 0 else func(foldl(func,z,seq[1:]), seq[0])
 
 def isInRange(x,y):
     return y in range(0,9) and x in range(0,9)
@@ -57,7 +57,7 @@ if __name__=='__main__' :
        print( showGrid(grid) )
        x = '1'
        while len(x) > 1 or not ord(x) in range(65,75) :
-           x = input('Indiquer une lettre : ')	
+           x = input('Indiquer une lettre : ').upper()	
        x = ord(x) - 65
 
        y = '0'
